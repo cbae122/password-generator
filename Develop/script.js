@@ -90,21 +90,38 @@ var upperCasedCharacters = [
   'Z',
 ];
 
+var confirmPasswordLength;
+var confirmSpecialCharacters;
+var confirmNumber;
+var confirmLower;
+var confirmUpper;
+
+var selections;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword () {
-  var lengthOfPassword = window.prompt ('How many characters would you like your password to be? Make a selection between 8 and 128.');
+  var confirmPasswordLength = (window.prompt ('How many characters would you like your password to be? Make a selection between 8 and 128.'));
 
-  if (!lengthOfPassword.includes(lengthOfPassword < 7 || lengthOfPassword > 129)) {
-    window.alert('You must make a selection between 8 and 128');
-    var lengthOfPassword = window.prompt ('How many characters would you like your password to be? Make a selection between 8 and 128.');
-  } else if (!lengthOfPassword.parseint('You must make a selection between 8 and 182')) {
-    window.alert('You must make a selection between 8 and 128');
-    var lengthOfPassword = window.prompt ('How many characters would you like your password to be? Make a selection between 8 and 128.');
+  if (!confirmPasswordLength) {
+      window.alert("This needs a number selection")
+  } else if (confirmPasswordLength < 8 || confirmPasswordLength > 128) {
+      confirmPasswordLength = (window.alert('You must make a selection between 8 and 128'));
+      // generatePassword ();
+  } else {
+      confirmNumber = window.confirm ('Will this have numbers?');
+      confirmSpecialCharacters = window.confirm ('Will this have special characters?');
+      confirmLower = window.confirm ('Will this have Lowercase?');
+      confirmUpper = window.confirm ('Will this have Uppercase?');
+  };
+  
+  if (confirmSpecialCharacters === false && confirmNumber === false && confirmLower === false && confirmUpper === false) {
+      window.alert('You must make at least one selection!');
+      // generatePassword ();
+  } else if (confirmSpecialCharacters && confirmNumber && confirmLower && confirmUpper) {
+
   }
-
 
 
 
