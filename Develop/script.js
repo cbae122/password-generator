@@ -117,12 +117,62 @@ function generatePassword () {
   };
   
   if (confirmSpecialCharacters === false && confirmNumber === false && confirmLower === false && confirmUpper === false) {
-      window.alert('You must make at least one selection!');
-      // generatePassword ();
+      selections = window.alert('You must make at least one selection!');
+
+      // 4 selections
   } else if (confirmSpecialCharacters && confirmNumber && confirmLower && confirmUpper) {
+      selections = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
 
-  }
+      // 3 selections
+  } else if (confirmSpecialCharacters && confirmNumber && confirmLower) {
+      selections = specialCharacters.concat(numericCharacters, lowerCasedCharacters);
 
+  } else if (confirmSpecialCharacters && confirmNumber && confirmUpper) {
+      selections = specialCharacters.concat(numericCharacters, upperCasedCharacters);
+
+  } else if (confirmSpecialCharacters && confirmLower && confirmUpper) {
+      selections = specialCharacters.concat(lowerCasedCharacters, upperCasedCharacters);
+
+  } else if (confirmNumber && confirmLower && confirmUpper) {
+      selections = numericCharacters.concat(lowerCasedCharacters, upperCasedCharacters);
+
+      // 2 selections
+  } else if (confirmSpecialCharacters && confirmNumber) {
+      selections = specialCharacters.concat(numericCharacters);
+
+  } else if (confirmSpecialCharacters && confirmLower) {
+      selections = specialCharacters.concat(lowerCasedCharacters);
+
+  } else if (confirmSpecialCharacters && confirmUpper) {
+      selections = specialCharacters.concat(upperCasedCharacters);
+
+  } else if (confirmNumber && confirmLower) {
+      selections = numericCharacters.concat(lowerCasedCharacters);
+
+  } else if (confirmNumber && confirmUpper) {
+      selections = numericCharacters.concat(upperCasedCharacters);
+
+  } else if (confirmLower && confirmUpper) {
+      selections = lowerCasedCharacters.concat(upperCasedCharacters);
+
+      // 1 selection
+  } else if (confirmSpecialCharacters) {
+      selections = specialCharacters;
+
+  } else if (confirmNumber) {
+      selections = numericCharacters;
+
+  } else if (confirmLower) {
+      selections = lowerCasedCharacters;
+
+  } else if (confirmUpper) {
+      selections = upperCasedCharacters;
+  };
+
+    var generatedPassword = [];
+    for (var i = 0; i < confirmPasswordLength; i++) {
+      generatedPassword = generatedPassword + selections[Math.floor]
+    }
 
 
 };
