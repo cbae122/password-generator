@@ -169,11 +169,15 @@ function generatePassword () {
       selections = upperCasedCharacters;
   };
 
+    console.log(selections);
+
     var generatedPassword = [];
     for (var i = 0; i < confirmPasswordLength; i++) {
-      generatedPassword = generatedPassword + selections[Math.floor]
+      generatedPassword = generatedPassword + selections[Math.floor(Math.random() * selections.length)];
+      console.log(generatedPassword);
     }
 
+    input generatedPassword;
 
 };
 
