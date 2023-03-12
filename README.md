@@ -16,8 +16,11 @@
 
 ![Random password generator.](./Develop/Image%203-11-23%20at%208.52%20PM.jpg)
 
+## Website Link
+
+
 ## Credits
-Instructor Diarmuid Murphy - during office hours, reviewed broken codes and provided solutions 
-TA Meg Meyers - during office hours and provided array for special characters, numbers, Uppercase letters and Lowercase letters.
-Zoom recording of previous classes.
-Google, w3schools.com, freecodecamp.org
+- Instructor Diarmuid Murphy - during office hours, reviewed broken codes and provided solutions 
+- TA Meg Meyers - during office hours and provided array for special characters, numbers, Uppercase letters and Lowercase letters.
+- Zoom recording of previous classes.
+- Google, w3schools.com, freecodecamp.org
