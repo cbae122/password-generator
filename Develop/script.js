@@ -101,6 +101,7 @@ var selections;
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+// start of password generation code
 function generatePassword () {
   var confirmPasswordLength = (window.prompt ('How many characters would you like your password to be? Make a selection between 8 and 128.'));
 
