@@ -109,7 +109,7 @@ function generatePassword () {
       window.alert("This needs a number selection")
   } else if (confirmPasswordLength < 8 || confirmPasswordLength > 128) {
       confirmPasswordLength = (window.alert('You must make a selection between 8 and 128'));
-      // generatePassword ();
+
   } else {
       confirmNumber = window.confirm ('Will this have numbers?');
       confirmSpecialCharacters = window.confirm ('Will this have special characters?');
