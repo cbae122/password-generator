@@ -177,7 +177,7 @@ function generatePassword () {
       console.log(generatedPassword);
     }
 
-    input generatedPassword;
+    return generatedPassword;
 
 };
 
