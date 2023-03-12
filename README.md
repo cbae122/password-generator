@@ -14,7 +14,7 @@
 - Password will be generated in the window.
 - See screenshot below as example
 
-![Random password generator.](./Develop/Image%203-11-23%20at%208.52%20PM.jpg)
+![Random password generator.](./assets/images/Image%203-11-23%20at%208.52%20PM.jpg)
 
 ## Website Link
 - https://cbae122.github.io/password-generator/
